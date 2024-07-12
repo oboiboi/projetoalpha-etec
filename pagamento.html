@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Cadastro de Compra - Parte 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>PAGAMENTO:</h2>
+        </div>
+        <form action="pagamento.php" method="post" id="form" class="form" style="padding: 10px;">
+
+                <label for="pagamentoPix" class="pag"><strong>Pix</strong></label>
+                <input type="radio" id="pagamentoPix" name="pagamento" value="pix" checked><br>
+           
+
+                <label for="pagamentoCartao"><strong>Cartão de Crédito</strong></label>    
+                <input type="radio" id="pagamentoCartao" name="pagamento" value="cartao"><br><br>
+    
+            <h3>Parcelamento (Somente para Cartão de Crédito):</h3><br>
+            <div style="padding-bottom: 20px;">
+                <select id="parcelas" name="parcelas" disabled>
+                    <option default value="Selecione">Quantidade de Parcelas:</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                    <option value="4">4x</option>
+                    <option value="5">5x</option>
+                    <option value="6">6x</option>
+                    <option value="7">7x</option>
+                    <option value="8">8x</option>
+                    <option value="9">9x</option>
+                    <option value="10">10x</option>
+                    <option value="11">11x</option>
+                    <option value="12">12x</option>   
+                </select>
+            </div>
+                
+            <div class="outro1">
+                <button type="submit">Confirmar Pagamento</button>
+            </div>
+            
+        </form>
+
+        <script>
+            // Habilitar/desabilitar select de parcelas
+            const pagamentoRadio = document.querySelectorAll('input[name="pagamento"]');
+            const parcelasSelect = document.getElementById('parcelas');
+    
+            pagamentoRadio.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    parcelasSelect.disabled = radio.value !== 'cartao';
+                });
+            });
+           
+    
+        </script>
+    </div>
+    
+
+    
+
+</body>
+
+</html>

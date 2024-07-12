@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>CADASTRO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>CADASTRO</h2>
+        </div>
+        <form action="cadastro.php?valor=enviado" method="post" id="form" class="form">
+            <div class="form-control">
+                <label for="">Nome:</label>
+                <input type="text" name="nome_cadastro" placeholder="Preencher nome" value="">
+            </div>
+            <div class="form-control">
+                <label for="">E-mail:</label>
+                <input type="email" name="email_cadastro" placeholder="Preencher e-mail">
+            </div>
+            <div class="form-control">
+                <label for="">Endereço:</label>
+                <input type="text" name="endereco_cadastro" placeholder="Preencher endereço">
+            </div>
+            <div class="form-control">
+                <label for="">Senha:</label>
+                <input type="password" name="senha_cadastro" placeholder="Preencher senha" maxlength="8" required>
+            </div>
+            <div class="form-control">
+                <label for="">Confirmar senha:</label>
+                <input type="password" name="senha_cadastro_confirma" placeholder="Preencher senha novamente" maxlength="8" required>
+            </div>
+           
+           <div class="outro6">
+                <button type="submit" name="botao" value="cadastrar">Cadastrar</button>
+                <button type="submit" name="botao" value="alterar">Alterar Cadastro</button>
+           </div>
+            
+            
+        </form>
+    </div>
+    
+</body>
+</html>
+
